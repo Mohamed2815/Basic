@@ -1,0 +1,327 @@
+/*Start Header*/
+.header {
+  background: url("../images/banner-bg.svg") no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  .mynav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2% 0;
+    z-index: 99;
+    transition: all 0.4s ease-in-out;
+    .navbar-toggler {
+      width: 6.5%;
+      line-height: 0.5;
+      padding: 0 0.3125em 0.3125em;
+      font-size: 1.0625rem;
+      border: none;
+      outline: none;
+      span {
+        width: 100%;
+        height: 3px;
+        display: inline-block;
+        background: #fff;
+        transition: all 0.3s linear;
+        position: relative;
+      }
+      &.clicked {
+        span {
+          &:first-child {
+            transform: rotate(45deg);
+            top: 0.688rem;
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:last-child {
+            transform: rotate(135deg);
+            top: -0.563rem;
+          }
+        }
+      }
+    }
+    .navbar-collapse {
+      .navbar-nav {
+        .nav-item {
+          &.active{
+            a{
+              color: #fe748a !important;
+            }
+          }
+          margin-left: 1.278em;
+
+          .nav-link {
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.125rem;
+            &:hover {
+              color: #fe8464;
+            }
+          }
+          .btn-normal {
+            @include down-btn;
+          }
+        }
+      }
+    }
+  }
+  .info {
+    margin: auto;
+    padding: 12em 0 0;
+    color: #fff;
+    h2 {
+      &:first-child {
+        margin-bottom: 0;
+        font-size: 2.3rem;
+        font-weight: 300;
+      }
+    }
+    .h1 {
+      font-weight: 700;
+      font-size: 2.3rem;
+    }
+    p {
+      margin: 2.500em 0;
+      font-size: 0.875rem;
+    }
+    button {
+      margin-top: .250em;
+      padding: 0.8em 1.8em;
+      display: inline-block;
+      color: #fff;
+      border: none;
+      background: linear-gradient(
+        to right,
+        #33c8c1 0%,
+        #119bd2 50%,
+        #33c8c1 100%
+      );
+      background-size: 200%;
+      background-position: left;
+      border-radius: 0.467em;
+      font-size: 0.938rem;
+      font-family: "Lato", sans-serif;
+      font-weight: 500;
+      transition: background-position 0.4s ease-in-out;
+      &:hover {
+        color: #fff;
+        background-position: right;
+      }
+    }
+    img {
+      max-width: 58.5%;
+      margin-top: 2.75rem;
+    }
+  }
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0 !important;
+    background-color: #fff;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 5px 30px 0 rgba(167, 167, 167, 0.7);
+    z-index: 999;
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    .mynav {
+      nav {
+        .down-btn {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    .mynav {
+      padding: 2% 0;
+      nav {
+        .navbar-nav {
+          .btn-normal {
+            display: none !important;
+          }
+        }
+      }
+      .navbar-nav {
+        background-color: #fff;
+        color: #000;
+        z-index: 99999;
+        position: relative;
+        padding: 10px 0;
+        margin-top: 10px;
+        .nav-item {
+          margin: 0 10px;
+          .nav-link {
+            color: #2e2e2e !important;
+            font-size: 15px;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header {
+    .mynav {
+      nav {
+        .down-btn {
+          display: block !important;
+          position: absolute;
+          left: 65%;
+          top: 5px;
+          bottom: 0;
+          button {
+            @include down-btn;
+          }
+        }
+      }
+    }
+    .info {
+      img {
+        max-width: 80%;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .header {
+    .mynav {
+      nav {
+        .down-btn {
+          display: block !important;
+          position: absolute;
+          left: 53%;
+          top: 5px;
+          bottom: 0;
+          button {
+            @include down-btn;
+          }
+        }
+      }
+      .navbar-toggler{
+        width: 8%;
+      }
+    }
+    .info {
+      img {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    .info {
+      h2 {
+        &:first-child {
+          font-size: 2rem;
+        }
+      }
+      .h1 {
+        font-size: 2rem;
+      }
+      p {
+        margin: 3em 0;
+      }
+      button {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* HTC One portrait and landscape */
+@media (min-width: 340px) and (max-width: 640px) {
+    .header{
+      .info{
+        padding: 6em 0 0;
+      }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575.98px) {
+  .header {
+    .mynav {
+      nav {
+        .down-btn {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px){
+  .header{
+    .navbar{
+      .navbar-toggler{
+        width: 9%;
+      }
+    }
+    .info{
+      padding: 8em 0 0;
+      h2 {
+        &:first-child {
+          font-size: 1.600rem;
+        }
+      }
+      .h1 {
+        font-size: 1.6rem;
+      }
+      img{
+        max-width: 85%;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 300px) and (max-width: 480px){
+  .header{
+    .mynav{
+      .navbar{
+        .navbar-toggler{
+          width: 17%;
+        }
+      }
+      nav{
+        .down-btn{
+          display: none !important;
+        }
+      }
+    }
+    .info{
+      h2{
+        &:first-child{
+          font-size: 1.1rem;
+        }
+      }
+      .h1{
+        font-size: 1.0rem;
+      }
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+/*End Header*/

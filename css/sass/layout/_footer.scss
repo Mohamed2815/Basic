@@ -1,0 +1,237 @@
+.footer {
+  //===========================
+  // Footer Background
+  //===========================
+  background-position: top center;
+  position: relative;
+  z-index: 5;
+  padding-top: $mainPadding;
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/footer-bg.svg");
+    background-position: top center;
+    z-index: -1;
+    background-size: cover;
+  }
+  //===========================
+  // Sticky Subscrip
+  //===========================
+  .subscribe {
+    background-color: #fff;
+    box-shadow: 0px 0px 18px 0px rgba(50, 77, 215, 0.14);
+    padding: 5.5em 3.125em 5.625em;
+    border-radius: 10px;
+    h2 {
+      font-size: 2.188rem;
+      color: #2E2E2E;
+    }
+    form {
+      position: relative;
+      input {
+        border: 2px solid #e1e1e1;
+        height: 4.063em;
+        padding: 0 1.875em;
+        border-radius: 5px;
+        width: 100%;
+        color: #2e2e2e;
+        outline-color: $blue;
+        &::placeholder{
+          color: #CCC;
+          font-size: 0.938rem;
+        }
+      }
+      button {
+        @extend .main-button;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 5px 5px 0;
+        height: 4.35em;
+      }
+    }
+  }
+  //===========================
+  // Adjusting Footer Content
+  //===========================
+  .footer-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 10%;
+    .grid-ul {
+      &:first-child {
+        grid-area: 1 / span 2;
+      }
+    }
+    img {
+      width: 35%;
+    }
+    .foot-desc {
+      color: #fff;
+      font-size: 0.938rem;
+      font-weight: 300;
+      line-height: 2;
+      margin: 2.5em 0;
+      width: 85%;
+    }
+    .grid-ul {
+      margin-top: 1em;
+      h3 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      li {
+        margin: 1.5em 0;
+        color: #fff;
+        a {
+          color: #fff;
+          transition: 0.3s linear;
+          text-decoration: none;
+          &:hover {
+            color: $mainSecColor;
+          }
+        }
+      }
+      ul {
+        padding: 0;
+      }
+    }
+  }
+
+  //===========================
+  // Social Media Icons Hover
+  //===========================
+  .social-media {
+    li {
+      &:not(:first-child) {
+        margin-left: 30px;
+      }
+      i {
+        font-size: 21px;
+        color: #fff;
+      }
+      $socialList: fa-facebook-f fa-twitter fa-instagram fa-linkedin;
+      @each $socialIcons, $hover in (fa-facebook-f, $mainSecColor),
+        (fa-twitter, #1da1f2), (fa-linkedin, #0077b5), (fa-instagram, #fd1d1d)
+      {
+        .#{$socialIcons} {
+          transition: 0.3s linear;
+          cursor: pointer;
+          &:hover {
+            color: $hover;
+          }
+        }
+      }
+    }
+  }
+  //===========================
+  // Footer Copyrigh Section
+  //===========================
+  .copyright {
+    margin-top: 5em;
+    hr {
+      background-color: rgba(255, 255, 255, 0.4);
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      margin: 0;
+      padding: 2em 0;
+      color: #fff;
+      a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.3s linear;
+        &:hover {
+          color: $mainSecColor;
+        }
+        i {
+          color: #fd1d1d;
+        }
+      }
+    }
+  }
+}
+//===========================
+// Footer Media
+//===========================
+@media (max-width: 1199.98px){
+  .footer{
+    .subscribe{
+      h2{
+        font-size: 1.8rem;
+      }
+    }
+    .footer-area{
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  }
+}
+
+@media (max-width: 991.98px){
+  .footer{
+    .subscribe{
+      h2{
+        font-size: 2.188rem;
+        width: 85%;
+        margin-bottom: 1.3em;
+      }
+    }
+    .footer-area{
+      .grid-ul{
+        grid-area: 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px){
+  .footer{
+    .subscribe{
+      padding: 3.5em 3.125em 3.625em;
+      h2{
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px){
+  .footer{
+    .subscribe{
+      padding: 2.5em 3.125em 2.625em;
+      h2{
+        width: 100%;
+      }
+      form{
+        input{
+          margin-bottom: 1em;
+        }
+        button{
+          position: static;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+    .footer-area{
+      .grid-ul{
+        grid-area: auto;
+      }
+    }
+  }
+}
+@media (max-width: 479.98px){
+  .footer{
+    .footer-area{
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+}

@@ -1,0 +1,50 @@
+//***Start Framrwork***//
+.para {
+  color: $paraColor;
+}
+%header-hr {
+  content: "";
+  width: 150px;
+  height: 6px;
+  display: block;
+  background-color: #fe748a;
+  margin: 25px auto;
+}
+%header-hr-left {
+  content: "";
+  width: 150px;
+  height: 6px;
+  display: block;
+  background-color: #fe748a;
+  margin: 25px 0;
+}
+%header-hr-right {
+  content: "";
+  width: 150px;
+  height: 6px;
+  display: block;
+  background-color: #fe748a;
+  position: absolute;
+  right: 0;
+}
+.main-padding {
+  padding: $mainPadding;
+}
+.main-button {
+  color: #fff;
+  border: none;
+  padding: 11px 30px;
+  background-image: $background-gradient;
+  background-size: 200%;
+  background-position: left;
+  border-radius: 7px;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  transition: background-position .4s ease-in-out;
+  &:hover {
+    color: #fff;
+    background-position: right;
+  }
+}
+//***End Framrwork***//

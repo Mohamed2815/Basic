@@ -1,0 +1,105 @@
+//******** Start Extra large devices (desktops, less than 1200px) ********//
+@media (min-width: 1200px) {
+}
+//******** End Extra large devices (desktops, less than 1200px) ********//
+
+
+//******** Start Large devices (desktops, less than 1200px) ********//
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  
+  /******* Start Adjusting Services *********/
+  .services {
+    .service {
+      .slogan {
+        .shape {
+          left: 30%;
+        }
+      }
+    }
+  }
+}
+// Second Type of Media
+@media (max-width: 1199.98px) {
+
+}
+//******** End Large devices (desktops, less than 1200px) ********//
+
+
+//******** Start Medium devices (tablets, less than 992px) ********//
+@media (min-width: 768px) and (max-width: 991.98px) {
+  
+  /******* Start Adjusting Services *********/
+  .services {
+    .service {
+      .card{
+        margin-bottom: 30px;
+      }
+      .slogan {
+        .shape {
+          left: 35%;
+        }
+      }
+    }
+  }
+}
+
+// Second Type OF Media
+@media (max-width: 991.98px) {
+ 
+}
+//******** End Medium devices (tablets, less than 992px) ********//
+
+
+//******** Start Small devices (landscape phones, less than 768px) ********//
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /******* Start Adjusting Clients *********/
+
+  /******* Start Adjusting Services *********/
+  .services {
+    .service {
+      .card{
+        margin-bottom: 30px;
+      }
+      .slogan {
+        .shape {
+          left: 38.3%;
+        }
+      }
+    }
+  }
+}
+// Second Type Of Media
+@media (max-width: 767.98px) {
+
+}
+//******** End Small devices (landscape phones, less than 768px) ********//
+
+
+//******** Start  Extra small devices (portrait phones, less than 576px) ********//
+@media (min-width: 320px) and (max-width: 575.98px) {
+
+  /******* Start Adjusting Services *********/
+  .services {
+    .service {
+      .card{
+        margin-bottom: 30px;
+      }
+      .slogan {
+        .shape {
+          left: 38.3%;
+        }
+      }
+    }
+  }
+}
+// Second Type Of media
+@media (max-width: 575.98px){
+
+}
+//******** End Extra small devices (portrait phones, less than 576px) ********//
+
+
+//***** iPhone 4/4S *****//
+@media (min-width: 320px) and (max-width: 480px){
+
+}

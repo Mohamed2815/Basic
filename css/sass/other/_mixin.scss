@@ -1,0 +1,73 @@
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+// Header Download Button
+@mixin down-btn {
+  color: #fff;
+  border: none;
+  padding: 0.733em 2em;
+  background-image: $background-gradient;
+  background-size: 200%;
+  background-position: left;
+  border-radius: 0.467em;
+  font-size: 0.938rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  transition: background-position .4s ease-in-out;
+  &:hover, :focus {
+    color: #fff;
+    background-position: right;
+  }
+}
+
+// Cool Facts Section
+@mixin facts {
+  content: "";
+  width: 155px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 60px;
+  background-color: #2abcc6;
+  transform: rotate(-45deg);
+}
+@mixin counter-color {
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 25%);
+    span {
+      color: #fff;
+      font-size: 23px;
+      font-weight: bold;
+    }
+    p {
+      color: #fff;
+    }
+}
+// Footer
+@mixin footer-links {
+  ul {
+    padding: 0;
+    li {
+      margin-top: 20%;
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 15px;
+        &:hover {
+          color: $mainSecColor;
+        }
+      }
+    }
+  }
+}
