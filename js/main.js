@@ -1,11 +1,15 @@
-$(function () {
-  //==========================
+(function (){
+
+})();
+
+(function () {
+      //==========================
   // Satrt Triggering Plugns
   //==========================
   if ($(window).width() >= 992) {
     new WOW().init();
-    // $("body").niceScroll();
   }
+  
   
   //==================================================
   // Adding Class Active and remove if form nav links
@@ -146,6 +150,6 @@ $(function () {
   // Loading
   //==================
   $(window).on("load", function (event) {
-    $(".lds-ring").delay(500).fadeOut(500);
+    $(".loading-wrapper").fadeOut();
   });
-});
+}());

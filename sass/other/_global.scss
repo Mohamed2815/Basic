@@ -1,0 +1,44 @@
+//**********Start Global Rules**********//
+*,
+*::after,
+*::before {
+  box-sizing: border-box !important;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  position: relative !important;
+}
+
+ul {
+  list-style: none;
+}
+
+// Scroll Bar
+
+@media(min-width:991.98px) {
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #FFF;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #fe8464;
+    border-radius: 6px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ff6036;
+  }
+}
+
+//**********End Global Rules**********//
