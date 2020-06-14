@@ -1,13 +1,16 @@
-(function () {})();
+(function (){
+
+})();
 
 (function () {
-  //==========================
+      //==========================
   // Satrt Triggering Plugns
   //==========================
   if ($(window).width() >= 992) {
     new WOW().init();
   }
-
+  
+  
   //==================================================
   // Adding Class Active and remove if form nav links
   //==================================================
@@ -89,18 +92,6 @@
   });
 
   //==================
-  // Counter Up
-  //==================
-  if ($(window).width() >= 992) {
-    $('.counterUp').countTo({
-      speed: 2500,
-      refreshInterval: 50,
-      formatter: function (value, options) {
-        return value.toFixed(options.decimals);
-      }
-    });
-  }
-  //==================
   // Video PopUp
   //==================
   $(".popup").magnificPopup({
@@ -161,4 +152,4 @@
   $(window).on("load", function (event) {
     $(".loading-wrapper").fadeOut();
   });
-})();
+}());
